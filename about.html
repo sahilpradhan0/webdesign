@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="/CSS/about.css">
+</head>
+<body>
+    <header class="nav resp">
+        <div class="logo opa">
+            <a href="index.html"><img src="/logos/main_logo.jpeg" alt="logo" /></a>
+        </div>
+        <ul class="list respo">
+            <li><a href="index.html" class="item margin">Home</a></li>
+            <li><a href="contact.html" class="item margin">Contact</a></li>
+            <li><a href="about.html" class="item margin">About</a></li>
+            <li><a href="signin.html" class="item margin register">Register</a></li>
+        </ul>
+        <div class="menus">
+            <img class="menu mtop" onclick="menuChange()" src="/logos/menu.png" />
+        </div>
+    </header>
+    <div class="card">
+        <h3>About Me</h3>
+        <img src="/logos/Sahil.jpg" alt="Sahil">
+        <p>I'm a web developer looking for a job in a good tech company</p>
+    </div>
+    <script>
+        const menuChange = () => {
+            var list = document.querySelector(".list");
+            var nav = document.querySelector(".nav");
+            var logo = document.querySelector('.logo');
+            var item = document.getElementsByClassName('item');
+            var menu = document.querySelector('.menu');
+            list.classList.toggle('respo');
+            nav.classList.toggle('resp');
+            logo.classList.toggle('opa');
+            menu.classList.toggle('mtop');
+            // alert('working');
+        }
+        // if (window.screen.width < "651px") {
+        //     menuChange();
+        // }
+    </script>
+</body>
+</html>

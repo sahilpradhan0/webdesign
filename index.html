@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Website</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <header class="nav resp">
+      <div class="logo opa">
+        <a href="index.html"><img src="/logos/main_logo.jpeg" alt="logo" /></a>
+      </div>
+      <ul class="list respo">
+        <li><a href="index.html" class="item margin">Home</a></li>
+        <li><a href="contact.html" class="item margin">Contact</a></li>
+        <li><a href="about.html" class="item margin">About</a></li>
+        <li><a href="signin.html" class="item margin register">Register</a></li>
+      </ul>
+      <div class="menus">
+        <img class="menu mtop" onclick="menuChange()" src="/logos/menu.png"/>
+      </div>
+    </header>
+    <section>
+      <h3 class="title">
+        Skillshare hires Cristophe Gillet as Chief Product Officer
+      </h3>
+      <main class="paragraph">
+        <p class="para">
+          Skillshare, Udemy's primary competitor, is taking the $28 million of
+          round C funding it received in july 2018 and using it to invest heavily
+          in its product experience. They have hired former Vimeo Head of
+          Product Cristophe Gillet.
+        </p>
+        <p class="para">
+          Skillshare is an American online learning community for people who want
+          to learn from educational videos. The courses, which are not
+          accreited, are available through subscription. The majority of
+          courses focus on interaction rather than lecturing, with the primary
+          goal of learning by completing a project. The main courses
+          categories include creative arts, design, entrepreneurship, lifestyle
+          and technology.
+        </p>
+        <p class="para">
+          Stay tuned for big changes on this fast growing platform
+        </p>
+    </main>
+      <div class="btn">
+        <button><a href="signup.html">Sign Up</a></button>
+        <button><a href="signin.html">Sign In</a></button>
+      </div>
+
+    </section>
+
+    <script>
+      const menuChange = () => {
+          var list = document.querySelector(".list");
+          var nav = document.querySelector(".nav");
+          var logo = document.querySelector('.logo');
+          var item = document.getElementsByClassName('item');
+          var menu = document.querySelector('.menu');
+          list.classList.toggle('respo');
+          nav.classList.toggle('resp');
+          logo.classList.toggle('opa');
+          menu.classList.toggle('mtop')
+        };
+        if(window.screen.width < "651px"){
+          menuChange();
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/CSS/contact.css">
+</head>
+
+<body>
+    <header class="nav resp">
+        <div class="logo opa">
+            <a href="index.html"><img src="/logos/main_logo.jpeg" alt="logo" /></a>
+        </div>
+        <ul class="list respo">
+            <li><a href="index.html" class="item margin">Home</a></li>
+            <li><a href="contact.html" class="item margin">Contact</a></li>
+            <li><a href="about.html" class="item margin">About</a></li>
+            <li><a href="signin.html" class="item margin register">Register</a></li>
+        </ul>
+        <div class="menus">
+            <img class="menu mtop" onclick="menuChange()" src="/logos/menu.png" />
+        </div>
+    </header>
+    <h3>Contact Us</h3>
+    <div class="form">
+        <form>
+            <div>
+                <input type="name" required id="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <input type="emai" required id="email" placeholder="Enter your Email">
+            </div>
+            <div>
+                <input type="number" required id="number" placeholder="Enter your Phone no.">
+            </div>
+            <div>
+                <textarea rows="8" required placeholder="Enter your Message"></textarea>
+            </div>
+            <div>
+                <button>Send Message</button>
+            </div>
+
+
+        </form>
+    </div>
+    <script>
+        const menuChange = () => {
+            var list = document.querySelector(".list");
+            var nav = document.querySelector(".nav");
+            var logo = document.querySelector('.logo');
+            var item = document.getElementsByClassName('item');
+            var menu = document.querySelector('.menu');
+            list.classList.toggle('respo');
+            nav.classList.toggle('resp');
+            logo.classList.toggle('opa');
+            menu.classList.toggle('mtop');
+            // alert('working');
+        }
+        // if (window.screen.width < "651px") {
+        //     menuChange();
+        // }
+    </script>
+</body>
+</html>
